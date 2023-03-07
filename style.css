@@ -15,7 +15,6 @@
 
 
 *{
-    /* padding: 0; */
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins",sans-serif;
@@ -29,6 +28,70 @@ body{
     background: #04242f;
 }
 
+section .hero{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content:center; */
+    /* margin: 10px; */
+    padding: 10px;
+    border:5px solid rgb(2, 177, 177);
+    background-color: wheat;
+    color: white;
+}
+
+.intro{
+    padding: 10px;
+    border:5px solid rgb(2, 177, 177);
+    font-family: 'Roboto Mono',monospace;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    border:5px solid rgb(2, 177, 177);
+    /* padding: 10px; */
+}
+
+.image-card{
+    border:5px solid rgb(2, 177, 177);
+    padding: 10px;
+    height: 500px;
+}
+
+.name-card{
+    font-size: 30px;
+    border:5px solid rgb(2, 177, 177);
+    /* padding: 10px; */
+    /* margin-top: 10px; */
+    /* flex-direction:row; */
+}
+
+section img{
+    animation: img-card 3s ease 1;
+    height: 450px;
+    width: 450px;
+    border-radius: 20px;
+}
+
+section h1{
+    /* font-size: 60px; */
+    font-family: "Cinzel",serif;
+    animation: name-card 2s ease 1;
+    text-align:center;
+}
+
+
+@keyframes name-card {
+    0%{
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 section{
     min-height: 100vh;
     display: flex;
@@ -37,33 +100,13 @@ section{
 }
 
 section:nth-child(1){
-    color:aliceblue;    
-}
-
-section:nth-child(2){
-    color:#04242f;
-    background-color: aliceblue;
+    color:aliceblue;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 section .container{
     margin: 100px;
-}
-
-@keyframes name {
-    0%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-section h1{
-    /* text-transform: uppercase; */
-    font-size: 60px;
-    font-family: "Cinzel",serif;
-    animation: name 2s ease 1;
-    text-align:center;
 }
 
 section h2{
@@ -76,11 +119,16 @@ section .card{
     display: flex;
 }
 
-@media (max-width: 900px) {
-    section h1{
-        font-size: 40px;
-    }
-    section .card{
-        flex-direction: column;
-    }
+section .card .text-card{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 255, 255, 0.256);
+    border-radius: 15px;
+}
+
+section .card .text-card h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
