@@ -30,41 +30,35 @@ body{
 
 section .hero{
     display: flex;
-    /* align-items: center; */
-    /* justify-content:center; */
-    /* margin: 10px; */
     padding: 10px;
-    border:5px solid rgb(2, 177, 177);
+    border:5px solid aqua;
     background-color: wheat;
     color: white;
 }
 
 .intro{
     padding: 10px;
-    border:5px solid rgb(2, 177, 177);
     font-family: 'Roboto Mono',monospace;
+    border:5px solid rgb(2, 177, 177);
 }
 
 .profile{
     display: flex;
     flex-direction: column;
     border:5px solid rgb(2, 177, 177);
-    /* padding: 10px; */
 }
 
 .image-card{
-    border:5px solid rgb(2, 177, 177);
     padding: 10px;
     height: 500px;
+    border:5px solid rgb(2, 177, 177);
 }
 
 .name-card{
     font-size: 30px;
     border:5px solid rgb(2, 177, 177);
-    /* padding: 10px; */
-    /* margin-top: 10px; */
-    /* flex-direction:row; */
 }
+
 
 section img{
     animation: img-card 3s ease 1;
@@ -73,13 +67,22 @@ section img{
     border-radius: 20px;
 }
 
+@keyframes img-card {
+    0%{
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 section h1{
-    /* font-size: 60px; */
     font-family: "Cinzel",serif;
     animation: name-card 2s ease 1;
     text-align:center;
 }
-
 
 @keyframes name-card {
     0%{
@@ -92,6 +95,7 @@ section h1{
     }
 }
 
+
 section{
     min-height: 100vh;
     display: flex;
@@ -101,8 +105,20 @@ section{
 
 section:nth-child(1){
     color:aliceblue;
-    /* justify-content: center; */
-    /* align-items: center; */
+}
+
+section:nth-child(2){
+    color:#04242f;
+    background-color: aliceblue;
+}
+
+section:nth-child(3){
+    color:aliceblue;
+}
+
+section:nth-child(4){
+    color:#04242f;
+    background: aliceblue;
 }
 
 section .container{
@@ -132,3 +148,28 @@ section .card .text-card h3{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
+@media (max-width: 900px) {
+    section h1{
+        font-size: 20px;
+    }
+    section .card{
+        flex-direction: column;
+    }
+    section .hero{
+        flex-direction: column;
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
