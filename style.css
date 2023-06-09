@@ -31,34 +31,62 @@ body{
 section .hero{
     display: flex;
     padding: 10px;
-    border:5px solid aqua;
-    background-color: wheat;
     color: white;
 }
 
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri;
+
+}
+
 .intro{
-    padding: 10px;
-    font-family: 'Roboto Mono',monospace;
-    border:5px solid rgb(2, 177, 177);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    word-break:keep-all;
+    font-weight: 400;
+    /* padding: 10px; */
+    /* word-wrap: break-word; */
+    /* font-family: 'Roboto Mono',monospace; */
+}
+
+@keyframes intro {
+    0%{
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.linkedin-container{
+    /* padding: 15px; */
+    width: 60px;
+    height: 60px; 
 }
 
 .profile{
     display: flex;
     flex-direction: column;
-    border:5px solid rgb(2, 177, 177);
+    /* border:5px solid rgb(2, 177, 177); */
 }
 
 .image-card{
-    padding: 10px;
-    height: 500px;
-    border:5px solid rgb(2, 177, 177);
+    padding: 8px;
+    height: 450px;
 }
 
 .name-card{
     font-size: 30px;
-    border:5px solid rgb(2, 177, 177);
+    padding: 5px;
 }
-
 
 section img{
     animation: img-card 3s ease 1;
@@ -95,6 +123,17 @@ section h1{
     }
 }
 
+.image-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.image-png{
+    width: 80px;
+    height: 80px;
+}
 
 section{
     min-height: 100vh;
@@ -116,10 +155,10 @@ section:nth-child(3){
     color:aliceblue;
 }
 
-section:nth-child(4){
+/* section:nth-child(4){
     color:#04242f;
     background: aliceblue;
-}
+} */
 
 section .container{
     margin: 100px;
@@ -136,10 +175,11 @@ section .card{
 }
 
 section .card .text-card{
-    padding: 20px;
+    padding: 30px;
     margin: 20px;
     background-color: rgba(0, 255, 255, 0.256);
     border-radius: 15px;
+    width: 400px;
 }
 
 section .card .text-card h3{
